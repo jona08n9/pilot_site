@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+img,
+iframe,
+video {
+  width: 100%;
+  height: auto;
+  transition: 1s;
+}
+
+iframe {
+  aspect-ratio: 16 / 9;
+}
+
+body {
+  background-image: url(splash_a_blur.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  background-position: 80% 60%;
+  margin-block-start: 5em;
+}
+
+/* ========== HEADERS GENERAL =========== */
+
+h1 {
+  font-family: contralto-big, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: contralto-big, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.625rem;
+}
+
+h3 {
+  font-family: contralto-big, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.375rem;
+  padding: 0.2em 0.2em 0.1em 0.2em;
+}
+
+/* ======== HEADER ========= */
+
+.header {
+  height: auto;
+  width: 100%;
+  background-color: rgba(108, 117, 125, 0.8);
+  padding-block: 1em;
+  padding-inline: 3em;
+  position: fixed;
+  top: 0;
+}
+
+.header > h1 {
+  color: #f8f9fa;
+  letter-spacing: 0.175em;
+}
+
+.header > h3 {
+  color: #f8f9fa;
+  letter-spacing: 0.1em;
+}
+
+/*========= MAIN ======== */
+
+main {
+  padding-top: 2.5em;
+}
+
+main > section > .text_video_container {
+  margin-inline: 2em;
+}
+
+.text_container {
+  padding: 1em;
+  background-color: rgba(108, 117, 125, 0.8);
+}
+
+.text_container > h1 {
+  color: #f8f9fa;
+  margin-block-end: 0.5em;
+  text-align: center;
+  letter-spacing: 0.075em;
+}
+
+.text_container > p {
+  color: #f8f9fa;
+  margin-block-end: 1em;
+  line-height: 1.5em;
+}
+
+.text_container > p > span {
+  background-color: rgba(202, 128, 156, 0.8);
+  font-style: bold;
+  font-size: 1.2em;
+  padding-inline: 0.08em;
+  letter-spacing: 0.075em;
+}
+
+.video_container > .youtube,
+.video_container > .video {
+  background-color: rgba(108, 117, 125, 0.8);
+  padding: 1em;
+  margin-block-end: 1em;
+}
+
+.video_container {
+  margin-block-start: 1em;
+}
+
+.youtube h2 > span,
+.video h2 > span {
+  color: #f8f9fa;
+  margin-block-end: 1em;
+  font-size: 1.625rem;
+}
+
+/*======= Gallery =========*/
+
+.gallary_container {
+  margin-inline: auto;
+  margin-block: 5em;
+  margin-inline: 2em;
+}
+
+.gallary_container > h1 {
+  color: #f8f9fa;
+  background-color: rgba(108, 117, 125, 0.8);
+}
+
+.gallary_container > h1 {
+  padding-block-start: 0.5em;
+  padding-inline-start: 0.5em;
+}
+
+.portraet,
+.bred,
+.hoej {
+  background-color: rgba(108, 117, 125, 0.8);
+  padding: 1em;
+  margin-block-end: 1em;
+}
+
+/*========= FOOTER ========*/
+
+footer {
+  background-color: rgba(108, 117, 125, 0.8);
+  padding-block: 2em;
+}
+
+footer > h2 {
+  text-align: center;
+  margin-block-end: 1em;
+  color: #f8f9fa;
+}
+
+.icon_container {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+}
+
+footer .icon {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin-block: 1em;
+  background-color: transparent;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+@media (max-width: 438px) {
+  .header > h1 {
+    color: #f8f9fa;
+    letter-spacing: 0.02em;
+    font-size: 1.8em;
+  }
+
+  .header > h3 {
+    color: #f8f9fa;
+    letter-spacing: 0.02em;
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 770px) {
+  /*============ HEADER ==============*/
+
+  .header {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    justify-content: center;
+    gap: 5%;
+  }
+
+  .header > h1 {
+    grid-column: 1/2;
+    justify-self: end;
+    margin-bottom: 0.5em;
+  }
+  .header > h3 {
+    grid-column: 2/3;
+    align-self: end;
+    margin-top: 0.5em;
+  }
+
+  /*======== MAIN ======= */
+  main > section > .text_video_container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 600px));
+    margin-inline: 2em;
+    gap: 1em;
+    justify-content: center;
+  }
+
+  .text_container > p {
+    font-size: 1.25em;
+  }
+
+  .video_container {
+    margin-block-start: 0;
+  }
+  .video_container > .video {
+    margin-block-end: 0;
+    align-self: end;
+  }
+
+  /*========= GALLERI ========*/
+
+  .gallary_container {
+    display: grid;
+    margin-inline: 2em;
+    justify-content: center;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 600px));
+    padding-block-end: 1em;
+    gap: 1em;
+    justify-content: center;
+  }
+
+  .portraet {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    aspect-ratio: 3898/2647;
+  }
+
+  .bred {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    aspect-ratio: 188 / 125;
+    align-self: end;
+  }
+
+  .hoej {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    aspect-ratio: 200/281;
+  }
+}
